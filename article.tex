@@ -1,0 +1,66 @@
+\documentclass{./llncs2e/llncs}
+\usepackage{graphicx}
+\usepackage{fixltx2e}
+\usepackage{mathtools}
+\usepackage[nolist,nohyperlinks]{acronym}
+% Maintain images and tables within their respective sections
+\usepackage[section]{placeins}
+
+% Scientific notation
+\usepackage[scientific-notation=true, round-precision=2, round-mode=figures]{siunitx}
+
+% For tables
+\usepackage{multirow}
+
+%For symbols like trademark
+\usepackage{textcomp}
+
+% To improve captions of tables
+\usepackage{caption}
+\captionsetup[table]{skip=10pt}
+
+% Improve encoding
+\usepackage[utf8]{inputenc}
+
+\pagestyle{plain}
+
+% Built the glossary when the main file is built.
+\usepackage[acronym]{glossaries}
+\input{acronyms}
+\makeglossaries
+
+% Load configuration
+\input{config}
+
+\begin{document}
+
+% -------------------------------------
+% Title
+% -------------------------------------
+\title{\Title}
+
+\subtitle{\SubTitle}
+\author{\Author, \Email}
+\institute{\Institution}
+
+\maketitle
+
+% -------------------------------------
+% Abstract and keywords
+% -------------------------------------
+
+\input{abstract}
+
+% -------------------------------------
+% Sections
+% -------------------------------------
+\input{sections/main}
+
+% -------------------------------------
+% Bibliography
+% -------------------------------------
+\bibliographystyle{ieeetr}
+
+\bibliography{references.bib}
+
+\end{document}
